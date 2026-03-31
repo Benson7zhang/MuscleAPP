@@ -1,0 +1,3 @@
+com.musclefit.app.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

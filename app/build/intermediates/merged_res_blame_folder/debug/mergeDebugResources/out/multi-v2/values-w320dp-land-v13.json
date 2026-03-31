@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.musclefit.app-mergeDebugResources-63:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/benson/.gradle/caches/8.13/transforms/3b8a95fc977bed124e258953df432db5/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,61",
+                        "endOffsets": "105,167"
+                    }
+                }
+            ]
+        }
+    ]
+}

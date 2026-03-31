@@ -1,0 +1,270 @@
+{
+  "chest": {
+    "name": "胸肌",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "push_up",
+        "name": "标准俯卧撑",
+        "image": "ex_chest_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双手略宽于肩，身体保持一条直线，下放至胸部接近地面后推起。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["收紧核心避免塌腰", "下放2秒，上推1秒"]
+      },
+      {
+        "id": "incline_push_up",
+        "name": "上斜俯卧撑",
+        "image": "ex_chest_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双手撑在高位支撑物，降低难度并强化胸部发力路径。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["肩胛稳定", "初学者优先掌握动作轨迹"]
+      },
+      {
+        "id": "bench_press",
+        "name": "杠铃卧推",
+        "image": "ex_chest_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 肩胛后缩，下放至胸线后稳定推起，适合中级以上训练。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["全程脚跟踩稳", "避免反弹借力"]
+      }
+    ]
+  },
+  "shoulder": {
+    "name": "肩部",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "pike_push_up",
+        "name": "俯身倒V撑",
+        "image": "ex_shoulder_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 身体形成倒V，屈肘下放头部后推回，强化前三角。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["肘部微向后", "颈部保持中立"]
+      },
+      {
+        "id": "dumbbell_lateral_raise",
+        "name": "哑铃侧平举",
+        "image": "ex_shoulder_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 手肘微屈抬至肩高，控制离心下放。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["避免耸肩", "不要大幅借力"]
+      }
+    ]
+  },
+  "triceps": {
+    "name": "三头肌",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "bench_dip",
+        "name": "反向撑体臂屈伸",
+        "image": "ex_triceps_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双手支撑凳缘，屈肘下放后发力推起。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["肩部下沉", "下放不过深"]
+      },
+      {
+        "id": "cable_pushdown",
+        "name": "绳索下压",
+        "image": "ex_triceps_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 肘部夹紧身体，前臂下压至完全伸展。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["肘部不前后摆动", "回程控制速度"]
+      },
+      {
+        "id": "diamond_push_up",
+        "name": "钻石俯卧撑",
+        "image": "ex_triceps_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双手靠近形成菱形，强调肱三头肌发力。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["核心稳定", "肩肘不适则降阶"]
+      }
+    ]
+  },
+  "abs": {
+    "name": "腹部",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "crunch",
+        "name": "仰卧卷腹",
+        "image": "ex_core_02.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 收紧腹部让肩胛离地，缓慢回落。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["避免拉颈", "发力集中腹直肌"]
+      },
+      {
+        "id": "plank",
+        "name": "平板支撑",
+        "image": "ex_core_02.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 前臂支撑，身体一条直线，保持呼吸节奏。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["臀部不过高不过低", "以质量优先于时间"]
+      },
+      {
+        "id": "mountain_climber",
+        "name": "登山跑",
+        "image": "ex_core_02.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 俯撑位交替提膝向胸，兼顾核心与心肺。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["骨盆稳定", "保持匀速呼吸"]
+      }
+    ]
+  },
+  "thigh": {
+    "name": "大腿",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "bodyweight_squat",
+        "name": "自重深蹲",
+        "image": "mimg_thigh.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双脚与肩同宽，下蹲到大腿接近平行后起身。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["膝盖方向与脚尖一致", "起身脚跟发力"]
+      },
+      {
+        "id": "lunge",
+        "name": "弓步蹲",
+        "image": "mimg_thigh.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 前后分腿屈伸，左右腿交替训练。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["躯干稳定", "后膝接近地面即可"]
+      }
+    ]
+  },
+  "calf": {
+    "name": "小腿",
+    "view": "front",
+    "exercises": [
+      {
+        "id": "standing_calf_raise",
+        "name": "站姿提踵",
+        "image": "mimg_calf.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 脚跟抬至最高点停顿，再缓慢下降。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["全程控制离心", "避免弹震式动作"]
+      },
+      {
+        "id": "single_leg_calf_raise",
+        "name": "单腿提踵",
+        "image": "mimg_calf.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 单腿完成提踵，增强小腿稳定与力量。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["可扶墙保持平衡", "每侧动作次数一致"]
+      }
+    ]
+  },
+  "traps": {
+    "name": "斜方肌",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "barbell_shrug",
+        "name": "杠铃耸肩",
+        "image": "ex_back_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 双肩向上提拉后缓慢放下，强化上斜方。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["不转肩", "全程颈部放松"]
+      },
+      {
+        "id": "dumbbell_shrug",
+        "name": "哑铃耸肩",
+        "image": "ex_back_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 手持哑铃自然下垂，向上耸肩发力。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["动作幅度适中", "避免借腰摆动"]
+      }
+    ]
+  },
+  "shoulders_back": {
+    "name": "后肩",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "rear_delt_row",
+        "name": "俯身后束划船",
+        "image": "ex_back_triceps_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 俯身位将肘部向外向后拉，强调后束三角肌。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["躯干稳定", "避免耸肩代偿"]
+      },
+      {
+        "id": "face_pull",
+        "name": "面拉",
+        "image": "ex_back_triceps_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 绳索拉向面部，肘部外展，改善后肩与体态。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["拉至眼睛高度", "控制回放"]
+      }
+    ]
+  },
+  "back": {
+    "name": "背部",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "pull_up",
+        "name": "引体向上",
+        "image": "ex_back_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 宽握上拉至下巴过杠，重点刺激背阔肌。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["核心收紧", "下放全程可控"]
+      },
+      {
+        "id": "superman",
+        "name": "超人挺身",
+        "image": "ex_back_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 俯卧抬起四肢，强化竖脊肌与后链。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["动作平稳", "避免过度后仰"]
+      },
+      {
+        "id": "barbell_row",
+        "name": "杠铃划船",
+        "image": "ex_back_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 髋部折叠俯身，拉杠至下胸位置后控制下放。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["背部保持中立", "避免借力猛拉"]
+      }
+    ]
+  },
+  "glutes": {
+    "name": "臀部",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "glute_bridge",
+        "name": "臀桥",
+        "image": "ex_fullbody_01.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 仰卧屈膝抬髋，顶峰收紧臀部。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["脚跟发力", "顶峰停顿1秒"]
+      },
+      {
+        "id": "single_leg_glute_bridge",
+        "name": "单腿臀桥",
+        "image": "ex_fullbody_02.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 单腿抬髋提升臀部与后链稳定性。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["骨盆保持水平", "慢速控制回落"]
+      }
+    ]
+  },
+  "hamstrings": {
+    "name": "腘绳肌",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "single_leg_hip_bridge",
+        "name": "单腿臀桥（腘绳侧重）",
+        "image": "mimg_thigh.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 通过脚跟发力提高腘绳肌参与度。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["小腿尽量垂直地面", "每侧均衡训练"]
+      },
+      {
+        "id": "romanian_deadlift",
+        "name": "罗马尼亚硬拉",
+        "image": "mimg_thigh.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 髋主导下放与起身，强化腘绳肌后链。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["保持背部中立", "杠铃贴近腿部轨迹"]
+      }
+    ]
+  },
+  "calves_back": {
+    "name": "小腿后侧",
+    "view": "back",
+    "exercises": [
+      {
+        "id": "seated_calf_raise",
+        "name": "坐姿提踵",
+        "image": "mimg_calf.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 坐姿下重点刺激比目鱼肌，提升下肢稳定。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["顶峰短暂停顿", "下放拉伸充分"]
+      },
+      {
+        "id": "standing_calf_raise_back",
+        "name": "站姿提踵（后侧）",
+        "image": "mimg_calf.png",
+        "description": "1. 调整起始姿势并稳定核心。\n2. 强化腓肠肌与跟腱周围力量。\n3. 按可控节奏完成回程并准备下一次。",
+        "tips": ["节奏稳定", "避免借惯性弹动"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="body_map_hotspot_normal">#2F8AB0CC</color>
+    <color name="body_map_hotspot_pressed">#7497C0DF</color>
+    <color name="body_map_hotspot_selected">#5497C0DF</color>
+    <color name="body_map_hotspot_stroke">#C2B9D5EE</color>
+    <color name="body_map_image_bg_cover">#E7EDF2</color>
+    <color name="body_map_panel_bg">#0F2038</color>
+    <color name="body_map_silhouette">#445774</color>
+    <color name="body_map_silhouette_detail">#5D7394</color>
+    <color name="home_control_bg">#1A2734</color>
+    <color name="home_control_ripple">#4096C4E8</color>
+    <color name="home_control_stroke">#35506A</color>
+    <color name="home_control_switch_bg">#162432</color>
+    <color name="home_gradient_bottom">#0E1A30</color>
+    <color name="home_gradient_top">#0B1220</color>
+    <color name="intensity_l1">#22C55E</color>
+    <color name="intensity_l2">#84CC16</color>
+    <color name="intensity_l3">#F59E0B</color>
+    <color name="intensity_l4">#F97316</color>
+    <color name="intensity_l5">#EF4444</color>
+    <color name="mf_bg">#0B1220</color>
+    <color name="mf_divider">#263548</color>
+    <color name="mf_muted">#9FB0C4</color>
+    <color name="mf_on_surface">#E5EDF7</color>
+    <color name="mf_primary">#34D399</color>
+    <color name="mf_primary_soft">#3349A6FF</color>
+    <color name="mf_secondary">#60A5FA</color>
+    <color name="mf_surface">#101A2B</color>
+</resources>

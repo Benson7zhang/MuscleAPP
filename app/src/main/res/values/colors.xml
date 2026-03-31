@@ -1,0 +1,32 @@
+<resources>
+    <color name="mf_primary">#10B981</color>
+    <color name="mf_secondary">#3B82F6</color>
+    <color name="mf_primary_soft">#332563EB</color>
+    <color name="mf_bg">#F8FAFC</color>
+    <color name="mf_surface">#FFFFFF</color>
+    <color name="mf_divider">#E2E8F0</color>
+    <color name="mf_on_surface">#0F172A</color>
+    <color name="mf_muted">#475569</color>
+
+    <color name="home_gradient_top">#F6F8FA</color>
+    <color name="home_gradient_bottom">#EDF2F6</color>
+    <color name="home_control_bg">#E8EDF3</color>
+    <color name="home_control_switch_bg">#EFF3F7</color>
+    <color name="home_control_stroke">#CDD7E1</color>
+    <color name="home_control_ripple">#30586F89</color>
+
+    <color name="body_map_panel_bg">#EEF2F5</color>
+    <color name="body_map_image_bg_cover">#E7EDF2</color>
+    <color name="body_map_silhouette">#D7DEE6</color>
+    <color name="body_map_silhouette_detail">#B9C3CE</color>
+    <color name="body_map_hotspot_normal">#2B7B8FA5</color>
+    <color name="body_map_hotspot_pressed">#706F95B8</color>
+    <color name="body_map_hotspot_selected">#4D6F95B8</color>
+    <color name="body_map_hotspot_stroke">#B06A8AA8</color>
+
+    <color name="intensity_l1">#22C55E</color>
+    <color name="intensity_l2">#84CC16</color>
+    <color name="intensity_l3">#F59E0B</color>
+    <color name="intensity_l4">#F97316</color>
+    <color name="intensity_l5">#EF4444</color>
+</resources>
