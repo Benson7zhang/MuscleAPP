@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.2" type="incidents">
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/musclefit/app/repo/ExerciseRepository.java"
+            line="178"
+            column="24"
+            startOffset="6673"
+            endLine="178"
+            endColumn="35"
+            endOffset="6684"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/musclefit/app/ui/home/HomeFragment.java"
+            line="69"
+            column="91"
+            startOffset="2568"
+            endLine="69"
+            endColumn="95"
+            endOffset="2572"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MuscleFit`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_image_preview.xml"
+            line="6"
+            column="5"
+            startOffset="252"
+            endLine="6"
+            endColumn="46"
+            endOffset="293"/>
+    </incident>
+
+    <incident
+        id="UselessParent"
+        severity="warning"
+        message="This `LinearLayout` layout or its `FrameLayout` parent is unnecessary; transfer the `background` attribute to the other view">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="7"
+            column="6"
+            startOffset="255"
+            endLine="7"
+            endColumn="18"
+            endOffset="267"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: body_map_back.png, body_map_back_female.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-nodpi/body_map_back_female.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-nodpi/body_map_back.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicates"
+        severity="warning"
+        message="The following unrelated icon files have identical contents: body_map_front.png, body_map_front_female.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-nodpi/body_map_front_female.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-nodpi/body_map_front.png"/>
+    </incident>
+
+</incidents>

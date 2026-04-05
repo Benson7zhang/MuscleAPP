@@ -1,0 +1,191 @@
+/Users/benson/Android_app/app/src/main/java/com/musclefit/app/repo/ExerciseRepository.java:178: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+        return trimmed.toLowerCase();
+                       ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.ROOT) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+/Users/benson/Android_app/app/src/main/java/com/musclefit/app/ui/home/HomeFragment.java:69: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+        View sheetView = getLayoutInflater().inflate(R.layout.dialog_home_category_sheet, null, false);
+                                                                                          ~~~~
+
+   Explanation for issues of type "InflateParams":
+   When inflating a layout, avoid passing in null as the parent view, since
+   otherwise any layout parameters on the root of the inflated layout will be
+   ignored.
+
+   https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+
+/Users/benson/Android_app/app/src/main/res/layout/activity_image_preview.xml:6: Warning: Possible overdraw: Root element paints background @android:color/black with a theme that also paints a background (inferred theme is @style/Theme.MuscleFit) [Overdraw]
+    android:background="@android:color/black">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/benson/Android_app/app/src/main/res/drawable/bg_body_map_panel.xml:2: Warning: The resource R.drawable.bg_body_map_panel appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/benson/Android_app/app/src/main/res/values/colors.xml:18: Warning: The resource R.color.body_map_panel_bg appears to be unused [UnusedResources]
+    <color name="body_map_panel_bg">#EEF2F5</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/colors.xml:19: Warning: The resource R.color.body_map_image_bg_cover appears to be unused [UnusedResources]
+    <color name="body_map_image_bg_cover">#E7EDF2</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/colors.xml:20: Warning: The resource R.color.body_map_silhouette appears to be unused [UnusedResources]
+    <color name="body_map_silhouette">#D7DEE6</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/colors.xml:21: Warning: The resource R.color.body_map_silhouette_detail appears to be unused [UnusedResources]
+    <color name="body_map_silhouette_detail">#B9C3CE</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/colors.xml:22: Warning: The resource R.color.body_map_hotspot_normal appears to be unused [UnusedResources]
+    <color name="body_map_hotspot_normal">#2B7B8FA5</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:9: Warning: The resource R.string.gender_male appears to be unused [UnusedResources]
+    <string name="gender_male">男</string>
+            ~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:10: Warning: The resource R.string.gender_female appears to be unused [UnusedResources]
+    <string name="gender_female">女</string>
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:13: Warning: The resource R.string.selected_category appears to be unused [UnusedResources]
+    <string name="selected_category">当前：%1$s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:16: Warning: The resource R.string.home_header_title appears to be unused [UnusedResources]
+    <string name="home_header_title">训练主页</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:17: Warning: The resource R.string.home_header_subtitle appears to be unused [UnusedResources]
+    <string name="home_header_subtitle">点击肌肉热区直达动作详情，支持前后视图切换</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:18: Warning: The resource R.string.body_map_gender_title appears to be unused [UnusedResources]
+    <string name="body_map_gender_title">性别</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:30: Warning: The resource R.string.home_body_map_hint appears to be unused [UnusedResources]
+    <string name="home_body_map_hint">点击胸、肩、背、腹、大腿、小腿进入动作库</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:31: Warning: The resource R.string.body_map_selected_hint appears to be unused [UnusedResources]
+    <string name="body_map_selected_hint">已选择：%1$s</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:39: Warning: The resource R.string.muscle_chest appears to be unused [UnusedResources]
+    <string name="muscle_chest">胸部</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:40: Warning: The resource R.string.muscle_back appears to be unused [UnusedResources]
+    <string name="muscle_back">背部</string>
+            ~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:41: Warning: The resource R.string.muscle_shoulders appears to be unused [UnusedResources]
+    <string name="muscle_shoulders">肩部</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:42: Warning: The resource R.string.muscle_shoulders_back appears to be unused [UnusedResources]
+    <string name="muscle_shoulders_back">后肩</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:43: Warning: The resource R.string.muscle_triceps appears to be unused [UnusedResources]
+    <string name="muscle_triceps">三头肌</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:44: Warning: The resource R.string.muscle_traps appears to be unused [UnusedResources]
+    <string name="muscle_traps">斜方肌</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:45: Warning: The resource R.string.muscle_abs appears to be unused [UnusedResources]
+    <string name="muscle_abs">腹部</string>
+            ~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:46: Warning: The resource R.string.muscle_thigh appears to be unused [UnusedResources]
+    <string name="muscle_thigh">大腿</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:47: Warning: The resource R.string.muscle_calf appears to be unused [UnusedResources]
+    <string name="muscle_calf">小腿</string>
+            ~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:48: Warning: The resource R.string.muscle_hamstrings appears to be unused [UnusedResources]
+    <string name="muscle_hamstrings">腘绳肌</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:49: Warning: The resource R.string.muscle_calves_back appears to be unused [UnusedResources]
+    <string name="muscle_calves_back">小腿后侧</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/strings.xml:50: Warning: The resource R.string.muscle_glutes appears to be unused [UnusedResources]
+    <string name="muscle_glutes">臀部</string>
+            ~~~~~~~~~~~~~~~~~~~~
+/Users/benson/Android_app/app/src/main/res/values/styles.xml:3: Warning: The resource R.style.Widget_Material3_Button_FilledTonalButton appears to be unused [UnusedResources]
+    <style name="Widget.Material3.Button.FilledTonalButton" parent="Widget.Material3.Button.TonalButton" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/Users/benson/Android_app/app/src/main/res/layout/fragment_home.xml:7: Warning: This LinearLayout layout or its FrameLayout parent is unnecessary; transfer the background attribute to the other view [UselessParent]
+    <LinearLayout
+     ~~~~~~~~~~~~
+
+   Explanation for issues of type "UselessParent":
+   A layout with children that has no siblings, is not a scrollview or a root
+   layout, and does not have a background, can be removed and have its
+   children moved directly into the parent for a flatter and more efficient
+   layout hierarchy.
+
+/Users/benson/Android_app/app/src/main/res/drawable-nodpi/body_map_back_female.png: Warning: The following unrelated icon files have identical contents: body_map_back.png, body_map_back_female.png [IconDuplicates]
+/Users/benson/Android_app/app/src/main/res/drawable-nodpi/body_map_front_female.png: Warning: The following unrelated icon files have identical contents: body_map_front.png, body_map_front_female.png [IconDuplicates]
+
+   Explanation for issues of type "IconDuplicates":
+   If an icon is repeated under different names, you can consolidate and just
+   use one of the icons and delete the others to make your application
+   smaller. However, duplicated icons usually are not intentional and can
+   sometimes point to icons that were accidentally overwritten or accidentally
+   not updated.
+
+0 errors, 33 warnings

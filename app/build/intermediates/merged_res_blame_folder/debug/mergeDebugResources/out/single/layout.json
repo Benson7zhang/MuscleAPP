@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/activity_main.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.musclefit.app-mergeDebugResources-64:/layout/fragment_profile.xml",
+        "source": "com.musclefit.app-main-67:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/activity_image_preview.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_image_preview.xml"
+    },
+    {
+        "merged": "com.musclefit.app-mergeDebugResources-64:/layout/activity_favorites.xml",
+        "source": "com.musclefit.app-main-67:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/fragment_coach.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_coach.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/dialog_home_category_sheet.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/dialog_home_category_sheet.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/fragment_exercise_list.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_exercise_list.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/fragment_profile.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/activity_exercise_detail.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_exercise_detail.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/item_exercise_card.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_exercise_card.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/item_booking_card.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_booking_card.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/fragment_home.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-mergeDebugResources-64:/layout/item_coach.xml",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_coach.xml"
+    }
+]

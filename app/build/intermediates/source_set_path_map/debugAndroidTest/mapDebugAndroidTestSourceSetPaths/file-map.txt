@@ -1,0 +1,6 @@
+com.musclefit.app.test.app-core-1.6.1-0 /Users/benson/.gradle/caches/8.13/transforms/7fdd959e0545fa3834763aa12ebd4809/transformed/core-1.6.1/res
+com.musclefit.app.test.app-androidTest-1 /Users/benson/Android_app/app/build/generated/res/resValues/androidTest/debug
+com.musclefit.app.test.app-updated_navigation_xml-2 /Users/benson/Android_app/app/build/generated/updated_navigation_xml/debugAndroidTest
+com.musclefit.app.test.app-mergeDebugAndroidTestResources-3 /Users/benson/Android_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.musclefit.app.test.app-mergeDebugAndroidTestResources-4 /Users/benson/Android_app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.musclefit.app.test.app-debugAndroidTest-5 /Users/benson/Android_app/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

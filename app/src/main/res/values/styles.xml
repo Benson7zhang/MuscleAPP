@@ -1,0 +1,27 @@
+<resources>
+    <!-- Bridge style name used in layout to Material 1.12 available tonal button. -->
+    <style name="Widget.Material3.Button.FilledTonalButton" parent="Widget.Material3.Button.TonalButton" />
+
+    <!-- Active indicator styling via supported itemActiveIndicatorStyle entrypoint. -->
+    <style name="Widget.MuscleFit.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/mf_primary_soft</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Button.HomeControl" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/mf_on_surface</item>
+        <item name="backgroundTint">@color/home_control_bg</item>
+        <item name="strokeColor">@color/home_control_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="rippleColor">@color/home_control_ripple</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Button.HomeSwitch" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/mf_muted</item>
+        <item name="backgroundTint">@color/home_control_switch_bg</item>
+        <item name="strokeColor">@color/home_control_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="rippleColor">@color/home_control_ripple</item>
+    </style>
+</resources>

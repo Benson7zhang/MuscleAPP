@@ -1,0 +1,218 @@
+[
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_map_back.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_map_back.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_bg_surface_card.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/bg_surface_card.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_item_booking_card.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_booking_card.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_chest_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_chest_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_bg_home_gradient.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/bg_home_gradient.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_map_back_female.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_map_back_female.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_map_front_female.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_map_front_female.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_chest.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_chest.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_activity_image_preview.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_image_preview.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_activity_main.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_shoulder.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_shoulder.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_core_02.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_core_02.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_legs_calf_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_legs_calf_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_map_front.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_map_front.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_activity_favorites.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_favorites.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_fullbody_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_fullbody_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_back_calf.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_back_calf.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_dialog_home_category_sheet.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/dialog_home_category_sheet.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_fragment_coach.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_coach.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_core_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_core_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_fragment_exercise_list.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_exercise_list.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_back_triceps_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_back_triceps_01.png"
+    },
+    {
+        "merged": "com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_calf.png.flat",
+        "source": "com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_calf.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_abs.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_abs.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_thigh.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_thigh.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_triceps.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_triceps.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_triceps_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_triceps_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_fragment_home.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_abs.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_abs.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_fullbody_02.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_fullbody_02.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_chest_03.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_chest_03.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_back_shoulder.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_back_shoulder.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_activity_exercise_detail.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/activity_exercise_detail.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_thigh.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_thigh.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_item_coach.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_coach.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_bg_muscle_placeholder.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/bg_muscle_placeholder.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_calf.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_calf.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_front_calf.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_front_calf.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/menu_menu_bottom_nav.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/menu/menu_bottom_nav.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_ic_chevron_right_24.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/ic_chevron_right_24.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_item_exercise_card.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/item_exercise_card.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_shoulder_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_shoulder_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_chest.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_chest.png"
+    },
+    {
+        "merged": "com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_back_calf.png.flat",
+        "source": "com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_back_calf.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_chest_02.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_chest_02.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_back_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_back_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/layout_fragment_profile.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/color_mf_bottom_nav_item_color.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/color/mf_bottom_nav_item_color.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_back_back.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_back_back.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_ex_legs_thigh_01.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/ex_legs_thigh_01.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_ic_arrow_back_24.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/ic_arrow_back_24.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_body_hotspot_back_thigh.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/body_hotspot_back_thigh.png"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable_bg_body_map_panel.xml.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable/bg_body_map_panel.xml"
+    },
+    {
+        "merged": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-debug-65:/drawable-nodpi_mimg_shoulder.png.flat",
+        "source": "/Users/benson/.gradle/daemon/8.13/com.musclefit.app-main-67:/drawable-nodpi/mimg_shoulder.png"
+    }
+]

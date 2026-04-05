@@ -1,0 +1,584 @@
+package com.musclefit.app.data.db;
+
+import android.database.Cursor;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
+import androidx.room.EntityInsertionAdapter;
+import androidx.room.RoomDatabase;
+import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
+import androidx.room.util.CursorUtil;
+import androidx.room.util.DBUtil;
+import androidx.sqlite.db.SupportSQLiteStatement;
+import com.musclefit.app.data.model.ExerciseCard;
+import java.lang.Class;
+import java.lang.Exception;
+import java.lang.Override;
+import java.lang.String;
+import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.Callable;
+import javax.annotation.processing.Generated;
+
+@Generated("androidx.room.RoomProcessor")
+@SuppressWarnings({"unchecked", "deprecation"})
+public final class ExerciseDao_Impl implements ExerciseDao {
+  private final RoomDatabase __db;
+
+  private final EntityInsertionAdapter<ExerciseEntity> __insertionAdapterOfExerciseEntity;
+
+  private final SharedSQLiteStatement __preparedStmtOfUpdateCounts;
+
+  public ExerciseDao_Impl(@NonNull final RoomDatabase __db) {
+    this.__db = __db;
+    this.__insertionAdapterOfExerciseEntity = new EntityInsertionAdapter<ExerciseEntity>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "INSERT OR IGNORE INTO `exercise` (`id`,`name`,`training_category`,`movement_type`,`description`,`grip_type`,`category_hint`,`caution_notes`,`primary_muscle`,`like_count`,`favorite_count`,`max_intensity_level`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement,
+          final ExerciseEntity entity) {
+        statement.bindLong(1, entity.id);
+        if (entity.name == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.name);
+        }
+        if (entity.trainingCategory == null) {
+          statement.bindNull(3);
+        } else {
+          statement.bindString(3, entity.trainingCategory);
+        }
+        if (entity.movementType == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.movementType);
+        }
+        if (entity.description == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.description);
+        }
+        if (entity.gripType == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.gripType);
+        }
+        if (entity.categoryHint == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.categoryHint);
+        }
+        if (entity.cautionNotes == null) {
+          statement.bindNull(8);
+        } else {
+          statement.bindString(8, entity.cautionNotes);
+        }
+        if (entity.primaryMuscle == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, entity.primaryMuscle);
+        }
+        statement.bindLong(10, entity.likeCount);
+        statement.bindLong(11, entity.favoriteCount);
+        statement.bindLong(12, entity.maxIntensityLevel);
+      }
+    };
+    this.__preparedStmtOfUpdateCounts = new SharedSQLiteStatement(__db) {
+      @Override
+      @NonNull
+      public String createQuery() {
+        final String _query = "UPDATE exercise SET like_count = ?, favorite_count = ? WHERE id = ?";
+        return _query;
+      }
+    };
+  }
+
+  @Override
+  public void insertAll(final List<ExerciseEntity> exercises) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __insertionAdapterOfExerciseEntity.insert(exercises);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void updateCounts(final long exerciseId, final int likeCount, final int favoriteCount) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfUpdateCounts.acquire();
+    int _argIndex = 1;
+    _stmt.bindLong(_argIndex, likeCount);
+    _argIndex = 2;
+    _stmt.bindLong(_argIndex, favoriteCount);
+    _argIndex = 3;
+    _stmt.bindLong(_argIndex, exerciseId);
+    try {
+      __db.beginTransaction();
+      try {
+        _stmt.executeUpdateDelete();
+        __db.setTransactionSuccessful();
+      } finally {
+        __db.endTransaction();
+      }
+    } finally {
+      __preparedStmtOfUpdateCounts.release(_stmt);
+    }
+  }
+
+  @Override
+  public LiveData<List<ExerciseCard>> observeExercises(final String keyword, final String category,
+      final String accountId) {
+    final String _sql = "SELECT e.id AS id, e.name AS name, e.training_category AS trainingCategory, e.movement_type AS movementType, e.description AS description, e.grip_type AS gripType, e.category_hint AS categoryHint, e.caution_notes AS cautionNotes, e.primary_muscle AS primaryMuscle, e.like_count AS likeCount, e.favorite_count AS favoriteCount, e.max_intensity_level AS maxIntensityLevel, COALESCE(i.liked, 0) AS liked, COALESCE(i.favorited, 0) AS favorited FROM exercise e LEFT JOIN exercise_interaction i ON e.id = i.exercise_id AND i.account_id = ? WHERE (? = '' OR e.name LIKE '%' || ? || '%' OR e.primary_muscle LIKE '%' || ? || '%') AND (? = 'ALL' OR e.training_category = ?) ORDER BY e.id";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 6);
+    int _argIndex = 1;
+    if (accountId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, accountId);
+    }
+    _argIndex = 2;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 3;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 4;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 5;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    _argIndex = 6;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    return __db.getInvalidationTracker().createLiveData(new String[] {"exercise",
+        "exercise_interaction"}, false, new Callable<List<ExerciseCard>>() {
+      @Override
+      @Nullable
+      public List<ExerciseCard> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = 0;
+          final int _cursorIndexOfName = 1;
+          final int _cursorIndexOfTrainingCategory = 2;
+          final int _cursorIndexOfMovementType = 3;
+          final int _cursorIndexOfDescription = 4;
+          final int _cursorIndexOfGripType = 5;
+          final int _cursorIndexOfCategoryHint = 6;
+          final int _cursorIndexOfCautionNotes = 7;
+          final int _cursorIndexOfPrimaryMuscle = 8;
+          final int _cursorIndexOfLikeCount = 9;
+          final int _cursorIndexOfFavoriteCount = 10;
+          final int _cursorIndexOfMaxIntensityLevel = 11;
+          final int _cursorIndexOfLiked = 12;
+          final int _cursorIndexOfFavorited = 13;
+          final List<ExerciseCard> _result = new ArrayList<ExerciseCard>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final ExerciseCard _item;
+            _item = new ExerciseCard();
+            _item.id = _cursor.getLong(_cursorIndexOfId);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _item.name = null;
+            } else {
+              _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfTrainingCategory)) {
+              _item.trainingCategory = null;
+            } else {
+              _item.trainingCategory = _cursor.getString(_cursorIndexOfTrainingCategory);
+            }
+            if (_cursor.isNull(_cursorIndexOfMovementType)) {
+              _item.movementType = null;
+            } else {
+              _item.movementType = _cursor.getString(_cursorIndexOfMovementType);
+            }
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _item.description = null;
+            } else {
+              _item.description = _cursor.getString(_cursorIndexOfDescription);
+            }
+            if (_cursor.isNull(_cursorIndexOfGripType)) {
+              _item.gripType = null;
+            } else {
+              _item.gripType = _cursor.getString(_cursorIndexOfGripType);
+            }
+            if (_cursor.isNull(_cursorIndexOfCategoryHint)) {
+              _item.categoryHint = null;
+            } else {
+              _item.categoryHint = _cursor.getString(_cursorIndexOfCategoryHint);
+            }
+            if (_cursor.isNull(_cursorIndexOfCautionNotes)) {
+              _item.cautionNotes = null;
+            } else {
+              _item.cautionNotes = _cursor.getString(_cursorIndexOfCautionNotes);
+            }
+            if (_cursor.isNull(_cursorIndexOfPrimaryMuscle)) {
+              _item.primaryMuscle = null;
+            } else {
+              _item.primaryMuscle = _cursor.getString(_cursorIndexOfPrimaryMuscle);
+            }
+            _item.likeCount = _cursor.getInt(_cursorIndexOfLikeCount);
+            _item.favoriteCount = _cursor.getInt(_cursorIndexOfFavoriteCount);
+            _item.maxIntensityLevel = _cursor.getInt(_cursorIndexOfMaxIntensityLevel);
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfLiked);
+            _item.liked = _tmp != 0;
+            final int _tmp_1;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfFavorited);
+            _item.favorited = _tmp_1 != 0;
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public LiveData<List<ExerciseCard>> observeFavoriteExercises(final String keyword,
+      final String category, final String accountId) {
+    final String _sql = "SELECT e.id AS id, e.name AS name, e.training_category AS trainingCategory, e.movement_type AS movementType, e.description AS description, e.grip_type AS gripType, e.category_hint AS categoryHint, e.caution_notes AS cautionNotes, e.primary_muscle AS primaryMuscle, e.like_count AS likeCount, e.favorite_count AS favoriteCount, e.max_intensity_level AS maxIntensityLevel, COALESCE(i.liked, 0) AS liked, COALESCE(i.favorited, 0) AS favorited FROM exercise e LEFT JOIN exercise_interaction i ON e.id = i.exercise_id AND i.account_id = ? WHERE COALESCE(i.favorited, 0) = 1 AND (? = '' OR e.name LIKE '%' || ? || '%' OR e.primary_muscle LIKE '%' || ? || '%') AND (? = 'ALL' OR e.training_category = ?) ORDER BY i.updated_at DESC";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 6);
+    int _argIndex = 1;
+    if (accountId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, accountId);
+    }
+    _argIndex = 2;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 3;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 4;
+    if (keyword == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, keyword);
+    }
+    _argIndex = 5;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    _argIndex = 6;
+    if (category == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, category);
+    }
+    return __db.getInvalidationTracker().createLiveData(new String[] {"exercise",
+        "exercise_interaction"}, false, new Callable<List<ExerciseCard>>() {
+      @Override
+      @Nullable
+      public List<ExerciseCard> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = 0;
+          final int _cursorIndexOfName = 1;
+          final int _cursorIndexOfTrainingCategory = 2;
+          final int _cursorIndexOfMovementType = 3;
+          final int _cursorIndexOfDescription = 4;
+          final int _cursorIndexOfGripType = 5;
+          final int _cursorIndexOfCategoryHint = 6;
+          final int _cursorIndexOfCautionNotes = 7;
+          final int _cursorIndexOfPrimaryMuscle = 8;
+          final int _cursorIndexOfLikeCount = 9;
+          final int _cursorIndexOfFavoriteCount = 10;
+          final int _cursorIndexOfMaxIntensityLevel = 11;
+          final int _cursorIndexOfLiked = 12;
+          final int _cursorIndexOfFavorited = 13;
+          final List<ExerciseCard> _result = new ArrayList<ExerciseCard>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final ExerciseCard _item;
+            _item = new ExerciseCard();
+            _item.id = _cursor.getLong(_cursorIndexOfId);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _item.name = null;
+            } else {
+              _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfTrainingCategory)) {
+              _item.trainingCategory = null;
+            } else {
+              _item.trainingCategory = _cursor.getString(_cursorIndexOfTrainingCategory);
+            }
+            if (_cursor.isNull(_cursorIndexOfMovementType)) {
+              _item.movementType = null;
+            } else {
+              _item.movementType = _cursor.getString(_cursorIndexOfMovementType);
+            }
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _item.description = null;
+            } else {
+              _item.description = _cursor.getString(_cursorIndexOfDescription);
+            }
+            if (_cursor.isNull(_cursorIndexOfGripType)) {
+              _item.gripType = null;
+            } else {
+              _item.gripType = _cursor.getString(_cursorIndexOfGripType);
+            }
+            if (_cursor.isNull(_cursorIndexOfCategoryHint)) {
+              _item.categoryHint = null;
+            } else {
+              _item.categoryHint = _cursor.getString(_cursorIndexOfCategoryHint);
+            }
+            if (_cursor.isNull(_cursorIndexOfCautionNotes)) {
+              _item.cautionNotes = null;
+            } else {
+              _item.cautionNotes = _cursor.getString(_cursorIndexOfCautionNotes);
+            }
+            if (_cursor.isNull(_cursorIndexOfPrimaryMuscle)) {
+              _item.primaryMuscle = null;
+            } else {
+              _item.primaryMuscle = _cursor.getString(_cursorIndexOfPrimaryMuscle);
+            }
+            _item.likeCount = _cursor.getInt(_cursorIndexOfLikeCount);
+            _item.favoriteCount = _cursor.getInt(_cursorIndexOfFavoriteCount);
+            _item.maxIntensityLevel = _cursor.getInt(_cursorIndexOfMaxIntensityLevel);
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfLiked);
+            _item.liked = _tmp != 0;
+            final int _tmp_1;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfFavorited);
+            _item.favorited = _tmp_1 != 0;
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public LiveData<ExerciseCard> observeExerciseById(final long exerciseId, final String accountId) {
+    final String _sql = "SELECT e.id AS id, e.name AS name, e.training_category AS trainingCategory, e.movement_type AS movementType, e.description AS description, e.grip_type AS gripType, e.category_hint AS categoryHint, e.caution_notes AS cautionNotes, e.primary_muscle AS primaryMuscle, e.like_count AS likeCount, e.favorite_count AS favoriteCount, e.max_intensity_level AS maxIntensityLevel, COALESCE(i.liked, 0) AS liked, COALESCE(i.favorited, 0) AS favorited FROM exercise e LEFT JOIN exercise_interaction i ON e.id = i.exercise_id AND i.account_id = ? WHERE e.id = ? LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    if (accountId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, accountId);
+    }
+    _argIndex = 2;
+    _statement.bindLong(_argIndex, exerciseId);
+    return __db.getInvalidationTracker().createLiveData(new String[] {"exercise",
+        "exercise_interaction"}, false, new Callable<ExerciseCard>() {
+      @Override
+      @Nullable
+      public ExerciseCard call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = 0;
+          final int _cursorIndexOfName = 1;
+          final int _cursorIndexOfTrainingCategory = 2;
+          final int _cursorIndexOfMovementType = 3;
+          final int _cursorIndexOfDescription = 4;
+          final int _cursorIndexOfGripType = 5;
+          final int _cursorIndexOfCategoryHint = 6;
+          final int _cursorIndexOfCautionNotes = 7;
+          final int _cursorIndexOfPrimaryMuscle = 8;
+          final int _cursorIndexOfLikeCount = 9;
+          final int _cursorIndexOfFavoriteCount = 10;
+          final int _cursorIndexOfMaxIntensityLevel = 11;
+          final int _cursorIndexOfLiked = 12;
+          final int _cursorIndexOfFavorited = 13;
+          final ExerciseCard _result;
+          if (_cursor.moveToFirst()) {
+            _result = new ExerciseCard();
+            _result.id = _cursor.getLong(_cursorIndexOfId);
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _result.name = null;
+            } else {
+              _result.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfTrainingCategory)) {
+              _result.trainingCategory = null;
+            } else {
+              _result.trainingCategory = _cursor.getString(_cursorIndexOfTrainingCategory);
+            }
+            if (_cursor.isNull(_cursorIndexOfMovementType)) {
+              _result.movementType = null;
+            } else {
+              _result.movementType = _cursor.getString(_cursorIndexOfMovementType);
+            }
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _result.description = null;
+            } else {
+              _result.description = _cursor.getString(_cursorIndexOfDescription);
+            }
+            if (_cursor.isNull(_cursorIndexOfGripType)) {
+              _result.gripType = null;
+            } else {
+              _result.gripType = _cursor.getString(_cursorIndexOfGripType);
+            }
+            if (_cursor.isNull(_cursorIndexOfCategoryHint)) {
+              _result.categoryHint = null;
+            } else {
+              _result.categoryHint = _cursor.getString(_cursorIndexOfCategoryHint);
+            }
+            if (_cursor.isNull(_cursorIndexOfCautionNotes)) {
+              _result.cautionNotes = null;
+            } else {
+              _result.cautionNotes = _cursor.getString(_cursorIndexOfCautionNotes);
+            }
+            if (_cursor.isNull(_cursorIndexOfPrimaryMuscle)) {
+              _result.primaryMuscle = null;
+            } else {
+              _result.primaryMuscle = _cursor.getString(_cursorIndexOfPrimaryMuscle);
+            }
+            _result.likeCount = _cursor.getInt(_cursorIndexOfLikeCount);
+            _result.favoriteCount = _cursor.getInt(_cursorIndexOfFavoriteCount);
+            _result.maxIntensityLevel = _cursor.getInt(_cursorIndexOfMaxIntensityLevel);
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfLiked);
+            _result.liked = _tmp != 0;
+            final int _tmp_1;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfFavorited);
+            _result.favorited = _tmp_1 != 0;
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public ExerciseEntity getExerciseSync(final long exerciseId) {
+    final String _sql = "SELECT * FROM exercise WHERE id = ? LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, exerciseId);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfTrainingCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "training_category");
+      final int _cursorIndexOfMovementType = CursorUtil.getColumnIndexOrThrow(_cursor, "movement_type");
+      final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+      final int _cursorIndexOfGripType = CursorUtil.getColumnIndexOrThrow(_cursor, "grip_type");
+      final int _cursorIndexOfCategoryHint = CursorUtil.getColumnIndexOrThrow(_cursor, "category_hint");
+      final int _cursorIndexOfCautionNotes = CursorUtil.getColumnIndexOrThrow(_cursor, "caution_notes");
+      final int _cursorIndexOfPrimaryMuscle = CursorUtil.getColumnIndexOrThrow(_cursor, "primary_muscle");
+      final int _cursorIndexOfLikeCount = CursorUtil.getColumnIndexOrThrow(_cursor, "like_count");
+      final int _cursorIndexOfFavoriteCount = CursorUtil.getColumnIndexOrThrow(_cursor, "favorite_count");
+      final int _cursorIndexOfMaxIntensityLevel = CursorUtil.getColumnIndexOrThrow(_cursor, "max_intensity_level");
+      final ExerciseEntity _result;
+      if (_cursor.moveToFirst()) {
+        _result = new ExerciseEntity();
+        _result.id = _cursor.getLong(_cursorIndexOfId);
+        if (_cursor.isNull(_cursorIndexOfName)) {
+          _result.name = null;
+        } else {
+          _result.name = _cursor.getString(_cursorIndexOfName);
+        }
+        if (_cursor.isNull(_cursorIndexOfTrainingCategory)) {
+          _result.trainingCategory = null;
+        } else {
+          _result.trainingCategory = _cursor.getString(_cursorIndexOfTrainingCategory);
+        }
+        if (_cursor.isNull(_cursorIndexOfMovementType)) {
+          _result.movementType = null;
+        } else {
+          _result.movementType = _cursor.getString(_cursorIndexOfMovementType);
+        }
+        if (_cursor.isNull(_cursorIndexOfDescription)) {
+          _result.description = null;
+        } else {
+          _result.description = _cursor.getString(_cursorIndexOfDescription);
+        }
+        if (_cursor.isNull(_cursorIndexOfGripType)) {
+          _result.gripType = null;
+        } else {
+          _result.gripType = _cursor.getString(_cursorIndexOfGripType);
+        }
+        if (_cursor.isNull(_cursorIndexOfCategoryHint)) {
+          _result.categoryHint = null;
+        } else {
+          _result.categoryHint = _cursor.getString(_cursorIndexOfCategoryHint);
+        }
+        if (_cursor.isNull(_cursorIndexOfCautionNotes)) {
+          _result.cautionNotes = null;
+        } else {
+          _result.cautionNotes = _cursor.getString(_cursorIndexOfCautionNotes);
+        }
+        if (_cursor.isNull(_cursorIndexOfPrimaryMuscle)) {
+          _result.primaryMuscle = null;
+        } else {
+          _result.primaryMuscle = _cursor.getString(_cursorIndexOfPrimaryMuscle);
+        }
+        _result.likeCount = _cursor.getInt(_cursorIndexOfLikeCount);
+        _result.favoriteCount = _cursor.getInt(_cursorIndexOfFavoriteCount);
+        _result.maxIntensityLevel = _cursor.getInt(_cursorIndexOfMaxIntensityLevel);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
+  }
+
+  @NonNull
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
+  }
+}
