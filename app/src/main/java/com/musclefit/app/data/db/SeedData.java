@@ -14,6 +14,94 @@ public final class SeedData {
             db.exerciseDao().updateDescription(exercise.id, exercise.description);
         }
         db.intensityDao().insertAll(createIntensityNotes());
+        seedForumPosts(db);
+    }
+
+    private static void seedForumPosts(AppDatabase db) {
+        ForumDao forumDao = db.forumDao();
+        long now = System.currentTimeMillis();
+
+        ensureForumPost(
+                forumDao,
+                "000002",
+                "训练新手",
+                "一周三练怎么安排更稳？求指点",
+                "我刚训练两个月，目标是先把体态和基础力量练起来。现在计划一周训练三天，" +
+                        "每次 50 分钟左右。\n\n" +
+                        "目前思路是：\n" +
+                        "1. 第一天推：俯卧撑、哑铃卧推、侧平举；\n" +
+                        "2. 第二天拉：高位下拉、坐姿划船、弯举；\n" +
+                        "3. 第三天腿+核心：深蹲、箭步蹲、平板支撑。\n\n" +
+                        "我担心恢复不够，尤其是肩膀和下背。有没有更适合新手的组数和强度建议？",
+                now - 1000L * 60L * 60L * 28L
+        );
+
+        ensureForumPost(
+                forumDao,
+                "000003",
+                "核心进阶",
+                "核心训练不是只做卷腹，分享我的 4 周变化",
+                "这四周我把核心训练从“天天卷腹”改成“抗伸展+抗旋转+髋稳定”后，卧推和深蹲都更稳了。\n\n" +
+                        "我的安排：\n" +
+                        "1. 死虫 3x10（每侧）；\n" +
+                        "2. 平板支撑 3x40 秒；\n" +
+                        "3. 侧桥 3x30 秒（每侧）；\n" +
+                        "4. 站姿拉力带抗旋转 3x12（每侧）。\n\n" +
+                        "重点是动作慢一点、呼吸稳定，不追求数量，追求躯干控制。",
+                now - 1000L * 60L * 60L * 20L
+        );
+
+        ensureForumPost(
+                forumDao,
+                "000004",
+                "腿部强化",
+                "腿日后第二天酸痛太明显，怎么恢复更快？",
+                "昨天做了深蹲+罗马尼亚硬拉+腿举，今天大腿前后侧都很酸。想请教大家恢复策略。\n\n" +
+                        "我目前在做：\n" +
+                        "1. 训练后 10 分钟低强度走路；\n" +
+                        "2. 晚上泡沫轴滚动股四头和臀肌；\n" +
+                        "3. 保证蛋白质和饮水。\n\n" +
+                        "想知道是否需要主动恢复日（比如轻度骑车/快走），以及下一次腿日间隔几天更合适？",
+                now - 1000L * 60L * 60L * 12L
+        );
+
+        ensureForumPost(
+                forumDao,
+                "000001",
+                "管理员",
+                "论坛内容建议：训练经验请尽量写清步骤和注意事项",
+                "最近很多帖子质量不错。为了让新手更容易理解，建议发帖时尽量包含：\n\n" +
+                        "1. 动作名称与训练目标（增肌/减脂/体态）；\n" +
+                        "2. 关键步骤（至少 3 步）；\n" +
+                        "3. 常见错误与注意事项；\n" +
+                        "4. 适用人群或替代动作。\n\n" +
+                        "这样的内容更有参考价值，也能减少误解。欢迎继续分享真实训练反馈。",
+                now - 1000L * 60L * 60L * 6L
+        );
+    }
+
+    private static void ensureForumPost(
+            ForumDao forumDao,
+            String authorAccountId,
+            String authorNickname,
+            String title,
+            String content,
+            long timestamp
+    ) {
+        if (forumDao.countPostsByAuthorAndTitle(authorAccountId, title) > 0) {
+            return;
+        }
+        ForumPostEntity post = new ForumPostEntity();
+        post.authorAccountId = authorAccountId;
+        post.authorNickname = authorNickname;
+        post.title = title;
+        post.content = content;
+        post.likeCount = 0;
+        post.commentCount = 0;
+        post.favoriteCount = 0;
+        post.createdAt = timestamp;
+        post.updatedAt = timestamp;
+        forumDao.insertPost(post);
     }
 
     private static List<ExerciseEntity> createExercises() {

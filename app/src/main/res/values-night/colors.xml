@@ -1,28 +1,55 @@
 <resources>
-    <color name="mf_primary">#34D399</color>
-    <color name="mf_secondary">#60A5FA</color>
-    <color name="mf_primary_soft">#3349A6FF</color>
-    <color name="mf_bg">#0B1220</color>
-    <color name="mf_surface">#101A2B</color>
-    <color name="mf_divider">#263548</color>
-    <color name="mf_on_surface">#E5EDF7</color>
-    <color name="mf_muted">#9FB0C4</color>
+    <color name="mf_primary">#31C7BD</color>
+    <color name="mf_secondary">#7AA9FF</color>
+    <color name="mf_primary_soft">#2F39B8FF</color>
+    <color name="mf_bg">#0A101A</color>
+    <color name="mf_surface">#121B29</color>
+    <color name="mf_surface_alt">#172437</color>
+    <color name="mf_divider">#2B3A4D</color>
+    <color name="mf_on_surface">#EAF2FF</color>
+    <color name="mf_muted">#9BB0CC</color>
+    <color name="mf_scrim">#80070C14</color>
+    <color name="profile_nav_top">#111C2B</color>
+    <color name="profile_nav_bottom">#162437</color>
+    <color name="profile_nav_stroke">#2E4159</color>
+    <color name="profile_avatar_start">#31C7BD</color>
+    <color name="profile_avatar_end">#7AA9FF</color>
 
-    <color name="home_gradient_top">#0B1220</color>
-    <color name="home_gradient_bottom">#0E1A30</color>
-    <color name="home_control_bg">#1A2734</color>
-    <color name="home_control_switch_bg">#162432</color>
-    <color name="home_control_stroke">#35506A</color>
-    <color name="home_control_ripple">#4096C4E8</color>
+    <color name="home_gradient_top">#0A111C</color>
+    <color name="home_gradient_bottom">#0F1A2A</color>
+    <color name="home_control_bg">#182537</color>
+    <color name="home_control_switch_bg">#132134</color>
+    <color name="home_control_stroke">#35506C</color>
+    <color name="home_control_ripple">#5092C5EE</color>
 
-    <color name="body_map_panel_bg">#0F2038</color>
-    <color name="body_map_image_bg_cover">#E7EDF2</color>
-    <color name="body_map_silhouette">#445774</color>
-    <color name="body_map_silhouette_detail">#5D7394</color>
-    <color name="body_map_hotspot_normal">#2F8AB0CC</color>
-    <color name="body_map_hotspot_pressed">#7497C0DF</color>
-    <color name="body_map_hotspot_selected">#5497C0DF</color>
-    <color name="body_map_hotspot_stroke">#C2B9D5EE</color>
+    <color name="body_map_hotspot_pressed">#6D8DB1D1</color>
+    <color name="body_map_hotspot_selected">#4A8DB1D1</color>
+    <color name="body_map_hotspot_stroke">#B6AEC6E0</color>
+
+    <color name="forum_cover_1_start">#4A89FF</color>
+    <color name="forum_cover_1_end">#1D4C96</color>
+    <color name="forum_cover_2_start">#19B799</color>
+    <color name="forum_cover_2_end">#0E755E</color>
+    <color name="forum_cover_3_start">#8A75FF</color>
+    <color name="forum_cover_3_end">#4C3AAE</color>
+    <color name="forum_cover_4_start">#FFB648</color>
+    <color name="forum_cover_4_end">#B97914</color>
+    <color name="forum_cover_5_start">#F46EB3</color>
+    <color name="forum_cover_5_end">#AA3D78</color>
+    <color name="forum_cover_6_start">#34B7F3</color>
+    <color name="forum_cover_6_end">#1A6B9D</color>
+    <color name="forum_cover_text">#F6FAFF</color>
+
+    <color name="assistant_user_bubble">#1D334D</color>
+    <color name="assistant_ai_bubble">#1A2738</color>
+    <color name="ai_confidence_s_bg">#214934</color>
+    <color name="ai_confidence_s_text">#8EE1AF</color>
+    <color name="ai_confidence_a_bg">#223758</color>
+    <color name="ai_confidence_a_text">#9DC5FF</color>
+    <color name="ai_confidence_b_bg">#4A3A1F</color>
+    <color name="ai_confidence_b_text">#FFD58B</color>
+    <color name="ai_confidence_c_bg">#4F2225</color>
+    <color name="ai_confidence_c_text">#FFA4AA</color>
 
     <color name="intensity_l1">#22C55E</color>
     <color name="intensity_l2">#84CC16</color>

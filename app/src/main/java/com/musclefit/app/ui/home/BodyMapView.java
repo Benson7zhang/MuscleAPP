@@ -59,6 +59,21 @@ public class BodyMapView extends View {
             new HotspotMaskDef(KEY_CALF, R.drawable.body_hotspot_back_calf, 4f)
     );
 
+    private static final List<HotspotMaskDef> FRONT_MASKS_FEMALE = Arrays.asList(
+            new HotspotMaskDef(KEY_SHOULDER, R.drawable.body_hotspot_front_shoulder_female, 6f),
+            new HotspotMaskDef(KEY_CHEST, R.drawable.body_hotspot_front_chest_female, 6f),
+            new HotspotMaskDef(KEY_ABS, R.drawable.body_hotspot_front_abs_female, 2f),
+            new HotspotMaskDef(KEY_THIGH, R.drawable.body_hotspot_front_thigh_female, 6f),
+            new HotspotMaskDef(KEY_CALF, R.drawable.body_hotspot_front_calf_female, 4f)
+    );
+
+    private static final List<HotspotMaskDef> BACK_MASKS_FEMALE = Arrays.asList(
+            new HotspotMaskDef(KEY_SHOULDER, R.drawable.body_hotspot_back_shoulder_female, 6f),
+            new HotspotMaskDef(KEY_BACK, R.drawable.body_hotspot_back_back_female, 6f),
+            new HotspotMaskDef(KEY_THIGH, R.drawable.body_hotspot_back_thigh_female, 6f),
+            new HotspotMaskDef(KEY_CALF, R.drawable.body_hotspot_back_calf_female, 4f)
+    );
+
     private final Paint highlightStrokePaint = new Paint();
     private final Paint highlightFillPaint = new Paint();
     private final RectF imageContentRect = new RectF();
@@ -445,10 +460,10 @@ public class BodyMapView extends View {
     }
 
     private List<HotspotMaskDef> currentMaskDefs() {
-        if (side == SIDE_BACK) {
-            return BACK_MASKS;
+        if (gender == GENDER_FEMALE) {
+            return side == SIDE_BACK ? BACK_MASKS_FEMALE : FRONT_MASKS_FEMALE;
         }
-        return FRONT_MASKS;
+        return side == SIDE_BACK ? BACK_MASKS : FRONT_MASKS;
     }
 
     private static boolean almostEqual(float a, float b) {

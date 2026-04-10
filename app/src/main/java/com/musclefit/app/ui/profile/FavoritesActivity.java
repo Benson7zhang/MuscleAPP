@@ -139,7 +139,7 @@ public class FavoritesActivity extends AppCompatActivity {
             return;
         }
 
-        binding.tvFavoritesScopeHint.setText(getString(R.string.favorites_scope_hint_with_user, state.username));
+        binding.tvFavoritesScopeHint.setText(getString(R.string.favorites_scope_hint_with_user, state.accountId));
         viewModel.refreshForAccountScope();
     }
 

@@ -66,7 +66,8 @@ public class HomeFragment extends Fragment {
         }
 
         BottomSheetDialog dialog = new BottomSheetDialog(requireContext());
-        View sheetView = getLayoutInflater().inflate(R.layout.dialog_home_category_sheet, null, false);
+        ViewGroup parent = binding != null ? (ViewGroup) binding.getRoot() : null;
+        View sheetView = getLayoutInflater().inflate(R.layout.dialog_home_category_sheet, parent, false);
         RadioGroup categoryGroup = sheetView.findViewById(R.id.rg_sheet_home_category);
 
         int checkedId = categoryRadioIdByCategory(selectedCategory);
@@ -132,8 +133,8 @@ public class HomeFragment extends Fragment {
             }
 
             String titleGender = male
-                    ? getString(R.string.home_body_map_title_male)
-                    : getString(R.string.home_body_map_title_female);
+                    ? getString(R.string.gender_male)
+                    : getString(R.string.gender_female);
             String sideLabel = currentSide == BodyMapView.SIDE_FRONT
                     ? getString(R.string.body_map_side_front)
                     : getString(R.string.body_map_side_back);

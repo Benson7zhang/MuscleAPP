@@ -1,10 +1,38 @@
 <resources>
-    <!-- Bridge style name used in layout to Material 1.12 available tonal button. -->
-    <style name="Widget.Material3.Button.FilledTonalButton" parent="Widget.Material3.Button.TonalButton" />
-
     <!-- Active indicator styling via supported itemActiveIndicatorStyle entrypoint. -->
     <style name="Widget.MuscleFit.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/mf_primary_soft</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/mf_surface</item>
+        <item name="strokeColor">@color/mf_divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MuscleFit.LargeCard</item>
+    </style>
+
+    <style name="ShapeAppearance.MuscleFit.LargeCard" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/mf_primary</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:textColor">@color/mf_on_surface</item>
+        <item name="backgroundTint">@color/mf_surface_alt</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+    <style name="Widget.MuscleFit.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/mf_on_surface</item>
+        <item name="backgroundTint">@color/mf_surface</item>
+        <item name="strokeColor">@color/mf_divider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">14dp</item>
     </style>
 
     <style name="Widget.MuscleFit.Button.HomeControl" parent="Widget.Material3.Button.OutlinedButton">

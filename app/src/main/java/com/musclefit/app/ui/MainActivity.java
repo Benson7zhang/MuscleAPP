@@ -12,15 +12,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.musclefit.app.R;
 import com.musclefit.app.databinding.ActivityMainBinding;
-import com.musclefit.app.ui.coach.CoachFragment;
+import com.musclefit.app.ui.assistant.AiTrainingFragment;
 import com.musclefit.app.ui.exercise.ExerciseListFragment;
+import com.musclefit.app.ui.forum.ForumFragment;
 import com.musclefit.app.ui.home.HomeFragment;
 import com.musclefit.app.ui.profile.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG_HOME = "tab_home";
     private static final String TAG_EXERCISE = "tab_exercise";
-    private static final String TAG_COACH = "tab_coach";
+    private static final String TAG_AI = "tab_ai";
+    private static final String TAG_FORUM = "tab_forum";
     private static final String TAG_PROFILE = "tab_profile";
 
     private ActivityMainBinding binding;
@@ -116,8 +118,11 @@ public class MainActivity extends AppCompatActivity {
         if (itemId == R.id.nav_exercise) {
             return new ExerciseListFragment();
         }
-        if (itemId == R.id.nav_coach) {
-            return new CoachFragment();
+        if (itemId == R.id.nav_ai) {
+            return new AiTrainingFragment();
+        }
+        if (itemId == R.id.nav_forum) {
+            return new ForumFragment();
         }
         if (itemId == R.id.nav_profile) {
             return new ProfileFragment();
@@ -136,8 +141,11 @@ public class MainActivity extends AppCompatActivity {
         if (container instanceof ExerciseListFragment) {
             return R.id.nav_exercise;
         }
-        if (container instanceof CoachFragment) {
-            return R.id.nav_coach;
+        if (container instanceof AiTrainingFragment) {
+            return R.id.nav_ai;
+        }
+        if (container instanceof ForumFragment) {
+            return R.id.nav_forum;
         }
         if (container instanceof ProfileFragment) {
             return R.id.nav_profile;
@@ -149,8 +157,11 @@ public class MainActivity extends AppCompatActivity {
         if (isVisible(TAG_EXERCISE)) {
             return R.id.nav_exercise;
         }
-        if (isVisible(TAG_COACH)) {
-            return R.id.nav_coach;
+        if (isVisible(TAG_AI)) {
+            return R.id.nav_ai;
+        }
+        if (isVisible(TAG_FORUM)) {
+            return R.id.nav_forum;
         }
         if (isVisible(TAG_PROFILE)) {
             return R.id.nav_profile;
@@ -167,8 +178,11 @@ public class MainActivity extends AppCompatActivity {
         if (itemId == R.id.nav_exercise) {
             return TAG_EXERCISE;
         }
-        if (itemId == R.id.nav_coach) {
-            return TAG_COACH;
+        if (itemId == R.id.nav_ai) {
+            return TAG_AI;
+        }
+        if (itemId == R.id.nav_forum) {
+            return TAG_FORUM;
         }
         if (itemId == R.id.nav_profile) {
             return TAG_PROFILE;

@@ -1,7 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
 }
+
+def longcatApiKey = 'ak_2pO0gh5B493x5sy0sG0BH2O94pI7e'
+def longcatBaseUrl = 'https://api.longcat.chat'
+def longcatModel = 'LongCat-Flash-Chat'
 
 android {
     namespace = 'com.musclefit.app'
@@ -15,6 +20,9 @@ android {
         versionName = '1.0'
 
         testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+        buildConfigField 'String', 'LONGCAT_API_KEY', "\"${longcatApiKey}\""
+        buildConfigField 'String', 'LONGCAT_BASE_URL', "\"${longcatBaseUrl}\""
+        buildConfigField 'String', 'LONGCAT_MODEL', "\"${longcatModel}\""
     }
 
     buildTypes {
@@ -36,10 +44,7 @@ android {
     buildFeatures {
         viewBinding = true
         compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = '1.5.15'
+        buildConfig = true
     }
 
     lint {

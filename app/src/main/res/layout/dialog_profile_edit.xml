@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register_nickname_hint"
+            app:boxBackgroundColor="@color/mf_surface_alt"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/mf_divider">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dialog_profile_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/mf_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/profile_gender_hint"
+            app:boxBackgroundColor="@color/mf_surface_alt"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/mf_divider">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dialog_profile_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:longClickable="false"
+                android:textColor="@color/mf_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/profile_phone_hint"
+            app:boxBackgroundColor="@color/mf_surface_alt"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/mf_divider">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dialog_profile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/mf_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/profile_weight_hint"
+                app:boxBackgroundColor="@color/mf_surface_alt"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/mf_divider">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dialog_profile_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/mf_on_surface" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="1dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/profile_height_hint"
+                app:boxBackgroundColor="@color/mf_surface_alt"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/mf_divider">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_dialog_profile_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/mf_on_surface" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/profile_birth_hint"
+            app:boxBackgroundColor="@color/mf_surface_alt"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/mf_divider">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dialog_profile_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="date"
+                android:textColor="@color/mf_on_surface" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -17,6 +17,7 @@ import com.musclefit.app.data.model.ExerciseCard;
 import com.musclefit.app.data.model.ExerciseIntensityNote;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -167,14 +168,14 @@ public class ExerciseRepository {
         if (!authManager.isLoggedIn()) {
             return "guest";
         }
-        String username = authManager.getCurrent().username;
-        if (username == null) {
+        String accountId = authManager.getCurrent().accountId;
+        if (accountId == null) {
             return "guest";
         }
-        String trimmed = username.trim();
+        String trimmed = accountId.trim();
         if (trimmed.isEmpty()) {
             return "guest";
         }
-        return trimmed.toLowerCase();
+        return trimmed.toLowerCase(Locale.ROOT);
     }
 }
