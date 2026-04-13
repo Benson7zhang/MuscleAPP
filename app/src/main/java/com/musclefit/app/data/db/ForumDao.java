@@ -80,8 +80,8 @@ public interface ForumDao {
     @Query("DELETE FROM forum_post_like WHERE post_id = :postId AND account_id = :accountId")
     int deleteLike(long postId, String accountId);
 
-    @Query("UPDATE forum_post SET like_count = :likeCount, updated_at = :updatedAt WHERE id = :postId")
-    void updatePostLikeCount(long postId, int likeCount, long updatedAt);
+    @Query("UPDATE forum_post SET like_count = :likeCount WHERE id = :postId")
+    void updatePostLikeCount(long postId, int likeCount);
 
     @Query("SELECT * FROM forum_post_favorite WHERE post_id = :postId AND account_id = :accountId LIMIT 1")
     ForumPostFavoriteEntity getFavoriteSync(long postId, String accountId);
@@ -92,8 +92,8 @@ public interface ForumDao {
     @Query("DELETE FROM forum_post_favorite WHERE post_id = :postId AND account_id = :accountId")
     int deleteFavorite(long postId, String accountId);
 
-    @Query("UPDATE forum_post SET favorite_count = :favoriteCount, updated_at = :updatedAt WHERE id = :postId")
-    void updatePostFavoriteCount(long postId, int favoriteCount, long updatedAt);
+    @Query("UPDATE forum_post SET favorite_count = :favoriteCount WHERE id = :postId")
+    void updatePostFavoriteCount(long postId, int favoriteCount);
 
     @Query("UPDATE forum_post SET comment_count = :commentCount, updated_at = :updatedAt WHERE id = :postId")
     void updatePostCommentCount(long postId, int commentCount, long updatedAt);

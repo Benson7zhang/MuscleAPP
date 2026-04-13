@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MuscleFit</string>
+    <string name="app_name">智炼引擎</string>
     <string name="nav_home">首页</string>
     <string name="nav_exercise">动作库</string>
     <string name="nav_ai">AI训练</string>

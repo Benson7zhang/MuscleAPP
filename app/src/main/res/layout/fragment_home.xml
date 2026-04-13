@@ -35,7 +35,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_open_home_drawer"
-                    style="@style/Widget.MuscleFit.Button.HomeControl"
+                    style="@style/Widget.ZhiLianEngine.Button.HomeControl"
                     android:layout_width="0dp"
                     android:layout_height="44dp"
                     android:layout_weight="1"
@@ -43,7 +43,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_gender_switch"
-                    style="@style/Widget.MuscleFit.Button.HomeControl"
+                    style="@style/Widget.ZhiLianEngine.Button.HomeControl"
                     android:layout_width="0dp"
                     android:layout_height="44dp"
                     android:layout_marginStart="8dp"
@@ -101,7 +101,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_toggle_body_side"
-        style="@style/Widget.MuscleFit.Button.HomeSwitch"
+        style="@style/Widget.ZhiLianEngine.Button.HomeSwitch"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_gravity="end"

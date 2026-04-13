@@ -20,7 +20,7 @@
         android:elevation="10dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        app:itemActiveIndicatorStyle="@style/Widget.MuscleFit.BottomNavigationView.ActiveIndicator"
+        app:itemActiveIndicatorStyle="@style/Widget.ZhiLianEngine.BottomNavigationView.ActiveIndicator"
         app:itemIconTint="@color/mf_bottom_nav_item_color"
         app:itemRippleColor="@color/mf_primary_soft"
         app:itemTextColor="@color/mf_bottom_nav_item_color"

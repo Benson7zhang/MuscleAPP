@@ -6,7 +6,7 @@ import com.musclefit.app.auth.AuthManager;
 import com.musclefit.app.repo.ExerciseRepository;
 import com.musclefit.app.theme.ThemeManager;
 
-public class MuscleFitApp extends Application {
+public class ZhiLianEngineApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();

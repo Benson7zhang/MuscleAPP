@@ -274,7 +274,7 @@ public class ForumRepository {
                         forumDao.deleteLike(postId, accountId);
                         post.likeCount = Math.max(0, post.likeCount - 1);
                     }
-                    forumDao.updatePostLikeCount(postId, post.likeCount, now);
+                    forumDao.updatePostLikeCount(postId, post.likeCount);
                 });
             } catch (IllegalStateException notFound) {
                 result = ForumActionResult.NOT_FOUND;
@@ -323,7 +323,7 @@ public class ForumRepository {
                         forumDao.deleteFavorite(postId, accountId);
                         post.favoriteCount = Math.max(0, post.favoriteCount - 1);
                     }
-                    forumDao.updatePostFavoriteCount(postId, post.favoriteCount, now);
+                    forumDao.updatePostFavoriteCount(postId, post.favoriteCount);
                 });
             } catch (IllegalStateException notFound) {
                 result = ForumActionResult.NOT_FOUND;

@@ -113,7 +113,8 @@ public class AuthManager {
         preferences = context.getApplicationContext().getSharedPreferences(PREF, Context.MODE_PRIVATE);
         synchronized (accountLock) {
             ensurePresetAccountsLocked();
-            state.setValue(readFromPrefsLocked());
+            clearCurrentSessionOnLaunchLocked();
+            state.setValue(AuthState.guest());
         }
     }
 
@@ -372,6 +373,14 @@ public class AuthManager {
             return AuthState.guest();
         }
         return toAuthState(account);
+    }
+
+    private void clearCurrentSessionOnLaunchLocked() {
+        String currentId = preferences.getString(KEY_CURRENT_ACCOUNT_ID, "");
+        if (currentId == null || currentId.trim().isEmpty()) {
+            return;
+        }
+        preferences.edit().remove(KEY_CURRENT_ACCOUNT_ID).apply();
     }
 
     private void ensurePresetAccountsLocked() {

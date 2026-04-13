@@ -155,7 +155,7 @@ public class AIAssistantService {
 
     private String getSystemPrompt(String assistantType, AuthState state) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("你是 MuscleFit 的专业 AI 助手。输出必须专业、可执行、结构清晰，不夸张承诺，不提供医疗诊断。");
+        prompt.append("你是 智炼引擎 的专业 AI 助手。输出必须专业、可执行、结构清晰，不夸张承诺，不提供医疗诊断。");
         prompt.append("\n\n用户资料（来自本地账号）：\n").append(buildProfileContext(state));
         prompt.append("\n\n资料完整性规则：");
         prompt.append("\n1. 仅可使用当前登录账号资料。");

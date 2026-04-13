@@ -1,4 +1,4 @@
--- MuscleFit content-management schema (for MySQL + Navicat)
+-- 智炼引擎 content-management schema (for MySQL + Navicat)
 -- Runtime app uses local Room DB seeded from exported data.
 
 CREATE TABLE IF NOT EXISTS exercise (

@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'MuscleFit'
+rootProject.name = '智炼引擎'
 include(':app')

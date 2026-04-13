@@ -1,33 +1,33 @@
 <resources>
     <!-- Active indicator styling via supported itemActiveIndicatorStyle entrypoint. -->
-    <style name="Widget.MuscleFit.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+    <style name="Widget.ZhiLianEngine.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/mf_primary_soft</item>
     </style>
 
-    <style name="Widget.MuscleFit.Card" parent="Widget.Material3.CardView.Elevated">
+    <style name="Widget.ZhiLianEngine.Card" parent="Widget.Material3.CardView.Elevated">
         <item name="cardBackgroundColor">@color/mf_surface</item>
         <item name="strokeColor">@color/mf_divider</item>
         <item name="strokeWidth">1dp</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.MuscleFit.LargeCard</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.ZhiLianEngine.LargeCard</item>
     </style>
 
-    <style name="ShapeAppearance.MuscleFit.LargeCard" parent="ShapeAppearance.Material3.Corner.Medium">
+    <style name="ShapeAppearance.ZhiLianEngine.LargeCard" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerSize">18dp</item>
     </style>
 
-    <style name="Widget.MuscleFit.Button.Primary" parent="Widget.Material3.Button">
+    <style name="Widget.ZhiLianEngine.Button.Primary" parent="Widget.Material3.Button">
         <item name="android:textColor">@android:color/white</item>
         <item name="backgroundTint">@color/mf_primary</item>
         <item name="cornerRadius">14dp</item>
     </style>
 
-    <style name="Widget.MuscleFit.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+    <style name="Widget.ZhiLianEngine.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
         <item name="android:textColor">@color/mf_on_surface</item>
         <item name="backgroundTint">@color/mf_surface_alt</item>
         <item name="cornerRadius">14dp</item>
     </style>
 
-    <style name="Widget.MuscleFit.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
+    <style name="Widget.ZhiLianEngine.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:textColor">@color/mf_on_surface</item>
         <item name="backgroundTint">@color/mf_surface</item>
         <item name="strokeColor">@color/mf_divider</item>
@@ -35,7 +35,7 @@
         <item name="cornerRadius">14dp</item>
     </style>
 
-    <style name="Widget.MuscleFit.Button.HomeControl" parent="Widget.Material3.Button.OutlinedButton">
+    <style name="Widget.ZhiLianEngine.Button.HomeControl" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:textColor">@color/mf_on_surface</item>
         <item name="backgroundTint">@color/home_control_bg</item>
         <item name="strokeColor">@color/home_control_stroke</item>
@@ -44,7 +44,7 @@
         <item name="rippleColor">@color/home_control_ripple</item>
     </style>
 
-    <style name="Widget.MuscleFit.Button.HomeSwitch" parent="Widget.Material3.Button.OutlinedButton">
+    <style name="Widget.ZhiLianEngine.Button.HomeSwitch" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:textColor">@color/mf_muted</item>
         <item name="backgroundTint">@color/home_control_switch_bg</item>
         <item name="strokeColor">@color/home_control_stroke</item>
