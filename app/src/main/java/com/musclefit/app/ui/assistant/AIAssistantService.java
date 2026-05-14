@@ -211,23 +211,18 @@ public class AIAssistantService {
     private String buildProfileContext(AuthState state) {
         if (state == null || !state.loggedIn) {
             return "- 登录状态: 未登录\n"
-                    + "- 账号ID: 未提供\n"
-                    + "- 昵称: 未提供\n"
                     + "- 性别: 未提供\n"
+                    + "- 年龄: 未提供\n"
                     + "- 身高(cm): 未提供\n"
-                    + "- 体重(kg): 未提供\n"
-                    + "- 出生日期: 未提供\n"
-                    + "- 手机号: 未提供";
+                    + "- 体重(kg): 未提供";
         }
 
+        Integer age = parseAge(state.birthDate);
         return "- 登录状态: 已登录\n"
-                + "- 账号ID: " + safeProfileValue(state.accountId) + "\n"
-                + "- 昵称: " + safeProfileValue(state.nickname) + "\n"
                 + "- 性别: " + safeProfileValue(state.gender) + "\n"
+                + "- 年龄: " + (age == null ? "未提供" : age) + "\n"
                 + "- 身高(cm): " + safeProfileValue(state.heightCm) + "\n"
-                + "- 体重(kg): " + safeProfileValue(state.weightKg) + "\n"
-                + "- 出生日期: " + safeProfileValue(state.birthDate) + "\n"
-                + "- 手机号: " + safeProfileValue(state.phone);
+                + "- 体重(kg): " + safeProfileValue(state.weightKg);
     }
 
     private String safeProfileValue(String value) {

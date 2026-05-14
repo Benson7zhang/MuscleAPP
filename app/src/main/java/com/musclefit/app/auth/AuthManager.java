@@ -22,7 +22,7 @@ public class AuthManager {
     public static final String ADMIN_ACCOUNT_ID = "000001";
 
     private static final PresetAccount[] PRESET_ACCOUNTS = new PresetAccount[]{
-            new PresetAccount("000001", "admin123", "管理员", AuthRole.ADMIN),
+            new PresetAccount("000001", "user001", "管理员", AuthRole.USER),
             new PresetAccount("000002", "user002", "训练新手", AuthRole.USER),
             new PresetAccount("000003", "user003", "核心进阶", AuthRole.USER),
             new PresetAccount("000004", "user004", "腿部强化", AuthRole.USER)
