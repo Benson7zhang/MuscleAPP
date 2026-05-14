@@ -23,7 +23,7 @@
 
 ---
 
-## 3. 项目演示（可选）
+## 3. 项目演示
 当前 App 底部导航为 5 个主入口：
 - `首页`：点击肌肉区域，自动跳转动作库并携带筛选参数
 - `动作库`：按关键词+类别查找动作，进入详情查看步骤与注意事项
@@ -239,7 +239,7 @@ chmod +x run_stable_install.sh
 4. 查看文本建议 + 热量/营养素可视化条
 
 ### 示例 4：预置账号（开发测试）
-- 管理员：`000001 / admin123`
+- 用户：`000001 / user001`
 - 用户：`000002 / user002`
 - 用户：`000003 / user003`
 - 用户：`000004 / user004`
@@ -273,38 +273,7 @@ chmod +x run_stable_install.sh
 
 ---
 
-## 11. 常见问题（FAQ）
-
-### Q1：命令行提示 `Unable to locate a Java Runtime`
-A：请确认 JDK 17 已安装并配置 `JAVA_HOME`，然后重新执行 Gradle 命令。
-
-### Q2：安装 APK 时出现 `device offline`
-A：先执行：
-```bash
-adb kill-server
-adb start-server
-adb devices
-```
-仍不稳定可用：
-```bash
-./run_stable_install.sh
-```
-
-### Q3：为什么点赞/收藏/评论按钮不可用？
-A：这些操作与账号绑定，需先在“我的”页面登录。
-
-### Q4：AI 页面提示未配置 Key 或调用失败
-A：检查 `app/build.gradle` 中 Longcat BuildConfig 字段是否正确；确认网络可访问 Longcat 域名。
-
-### Q5：为什么同一台设备切换账号后收藏不同？
-A：收藏和互动数据按账号 ID 隔离，这是当前设计行为。
-
-### Q6：合并代码后出现 data binding 错误（`Found <layout> but data binding is not enabled`）
-A：当前项目使用 ViewBinding，若布局根节点误改为 `<layout>` 会触发该错误，请改回普通布局根节点或启用 dataBinding。
-
----
-
-## 12. 未来优化方向（TODO / Roadmap）
+## 11. 未来优化方向（TODO / Roadmap）
 
 - [ ] 将 AI Key 管理改为更安全的本地/CI 注入方案（避免明文硬编码）
 - [ ] 增加仪器测试（UI/Espresso）覆盖关键用户流程
@@ -315,7 +284,7 @@ A：当前项目使用 ViewBinding，若布局根节点误改为 `<layout>` 会�
 
 ---
 
-## 13. 贡献指南（Contributing）
+## 12. 贡献指南（Contributing）
 
 欢迎贡献代码与建议，推荐流程：
 
@@ -335,7 +304,7 @@ A：当前项目使用 ViewBinding，若布局根节点误改为 `<layout>` 会�
 
 ---
 
-## 14. 许可证（License）
+## 13. 许可证（License）
 
 当前仓库**未包含 License 文件**。  
 在补充正式许可证前，默认保留所有权利（All Rights Reserved）。  
