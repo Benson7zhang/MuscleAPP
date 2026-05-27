@@ -306,6 +306,4 @@ chmod +x run_stable_install.sh
 
 ## 13. 许可证（License）
 
-当前仓库**未包含 License 文件**。  
-在补充正式许可证前，默认保留所有权利（All Rights Reserved）。  
-如需开源发布，请先添加 `LICENSE`（如 MIT / Apache-2.0）。
+本项目采用 MIT License，详情请见 [LICENSE](LICENSE)。
